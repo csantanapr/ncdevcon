@@ -6,7 +6,7 @@
     git clone http://github.com/csantanapr/ncdevcon
     cd ncdevcon/bluelist-mobilepush-cordova
     edit app id to match yours configured with Push
-    update bluelist.json with values from Bluemix.net
+    update www/bluelist.json with values from Bluemix.net
     npm install
     gulp install
     ionic platform ios

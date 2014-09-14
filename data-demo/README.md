@@ -5,7 +5,7 @@
     npm install -g ionic cordova gulp
     git clone http://github.com/csantanapr/ncdevcon
     cd ncdevcon/bluelist-mobiledata-cordova
-    update bluelist.json with values from Bluemix.net
+    update www/bluelist.json with values from Bluemix.net
     npm install
     gulp install
     ionic platform ios
