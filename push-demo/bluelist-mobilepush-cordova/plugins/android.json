@@ -1,0 +1,127 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "res/xml/config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"IBMBluemixHybrid\"><param name=\"android-package\" value=\"com.ibm.mobile.services.cordova.core.CDVIBMBluemix\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"IBMDataHybrid\"><param name=\"android-package\" value=\"com.ibm.mobile.services.cordova.data.CDVIBMData\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"IBMQueryHybrid\"><param name=\"android-package\" value=\"com.ibm.mobile.services.cordova.data.CDVIBMQuery\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Keyboard\"><param name=\"android-package\" value=\"com.ionic.keyboard.IonicKeyboard\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Device\"><param name=\"android-package\" value=\"org.apache.cordova.device.Device\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"IBMPushHybrid\"><param name=\"android-package\" value=\"com.ibm.mobile.services.cordova.push.CDVIBMPush\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "AndroidManifest.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.INTERNET\" />",
+                            "count": 3
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\" />",
+                            "count": 3
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.READ_EXTERNAL_STORAGE\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"io.csantana.sampleapp.permission.C2D_MESSAGE\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"com.google.android.c2dm.permission.RECEIVE\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.WAKE_LOCK\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.GET_ACCOUNTS\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.USE_CREDENTIALS\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<permission android:name=\"io.csantana.sampleapp.permission.C2D_MESSAGE\" android:protectionLevel=\"signature\" />",
+                            "count": 1
+                        }
+                    ],
+                    "/manifest/application": [
+                        {
+                            "xml": "<meta-data android:name=\"com.google.android.gms.version\" android:value=\"@integer/google_play_services_version\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<service android:name=\"com.ibm.mobile.services.push.IBMPushIntentService\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<receiver android:name=\"com.ibm.mobile.services.push.IBMPushBroadcastReceiver\" android:permission=\"com.google.android.c2dm.permission.SEND\"><intent-filter><action android:name=\"com.google.android.c2dm.intent.RECEIVE\" /><category android:name=\"io.csantana.sampleapp\" /></intent-filter><intent-filter><action android:name=\"android.intent.action.BOOT_COMPLETED\" /><category android:name=\"io.csantana.sampleapp\" /></intent-filter></receiver>",
+                            "count": 1
+                        }
+                    ],
+                    "/manifest/application/activity": [
+                        {
+                            "xml": "<intent-filter><action android:name=\"io.csantana.sampleapp.IBMPushNotification\" /><category android:name=\"android.intent.category.DEFAULT\" /></intent-filter>",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "com.ibm.mobile.cordova.ibmbluemix": {
+            "PACKAGE_NAME": "io.csantana.sampleapp"
+        },
+        "com.ibm.mobile.cordova.ibmdata": {
+            "PACKAGE_NAME": "io.csantana.sampleapp"
+        },
+        "com.ionic.keyboard": {
+            "PACKAGE_NAME": "io.csantana.sampleapp"
+        },
+        "org.apache.cordova.console": {
+            "PACKAGE_NAME": "io.csantana.sampleapp"
+        },
+        "org.apache.cordova.device": {
+            "PACKAGE_NAME": "io.csantana.sampleapp"
+        },
+        "com.ibm.mobile.cordova.ibmpush": {
+            "PACKAGE_NAME": "io.csantana.sampleapp"
+        }
+    },
+    "dependent_plugins": {}
+}

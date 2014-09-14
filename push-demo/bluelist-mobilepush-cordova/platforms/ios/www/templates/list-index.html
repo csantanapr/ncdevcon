@@ -1,0 +1,44 @@
+<ion-pane>
+
+    <ion-header-bar class="bar-positive">
+        <div class="buttons">
+            <button class="button button-icon icon ion-ios7-minus-outline"
+                ng-click="showDelete = !showDelete;">
+            </button>
+        </div>
+        <h1 class="title">BlueList</h1>
+            <button class="button button-clear" ng-click="newItem()">
+                <i class="icon ion-ios7-plus-empty"></i>
+            </button>
+      </div>
+    </ion-header-bar>
+
+    <ion-content class="has-header">
+
+        <div class="list-error card assertive-bg" ng-show="!list">
+          <div class="item item-text-wrap">
+            {{error}}
+          </div>
+        </div>
+
+        <ion-refresher
+            pulling-text="Pull to refresh..."
+            on-refresh="onRefresh();" ng-show="list">
+        </ion-refresher>
+
+        <ion-list can-swipe="true" show-delete="showDelete" class="list">
+            <ion-item ng-repeat="item in list | orderBy:'name'" item="item" class="item" ng-click="editItem(item)">
+
+                <ion-delete-button class="ion-minus-circled"ng-click="onItemDelete(item)"></ion-delete-button>
+                {{item.get("name")}}
+                <ion-option-button class="button-assertive" ng-click="onItemDelete(item)">  Delete
+                </ion-option-button>
+                <!--
+                <ion-option-button class="button-royal" ng-click="editItem(item)">
+                    Edit
+                </ion-option-button>
+              -->
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-pane>

@@ -1,0 +1,75 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"Keyboard\"><param name=\"ios-package\" onload=\"true\" value=\"IonicKeyboard\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Console\"><param name=\"ios-package\" value=\"CDVLogger\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Device\"><param name=\"ios-package\" value=\"CDVDevice\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"IBMBluemixHybrid\"><param name=\"ios-package\" value=\"CDVIBMBluemix\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"IBMDataHybrid\"><param name=\"ios-package\" value=\"CDVIBMData\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"IBMQueryHybrid\"><param name=\"ios-package\" value=\"CDVIBMQuery\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"IBMPushHybrid\"><param name=\"ios-package\" value=\"CDVIBMPush\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "framework": {
+                "parents": {
+                    "libsqlite3.dylib": [
+                        {
+                            "xml": "false",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "com.ionic.keyboard": {
+            "PACKAGE_NAME": "io.csantana.sampleapp"
+        },
+        "org.apache.cordova.console": {
+            "PACKAGE_NAME": "io.csantana.sampleapp"
+        },
+        "org.apache.cordova.device": {
+            "PACKAGE_NAME": "io.csantana.sampleapp"
+        },
+        "com.ibm.mobile.cordova.ibmbluemix": {
+            "PACKAGE_NAME": "io.csantana.sampleapp"
+        },
+        "com.ibm.mobile.cordova.ibmdata": {
+            "PACKAGE_NAME": "io.csantana.sampleapp"
+        },
+        "com.ibm.mobile.cordova.ibmpush": {
+            "PACKAGE_NAME": "io.csantana.sampleapp"
+        }
+    },
+    "dependent_plugins": {}
+}

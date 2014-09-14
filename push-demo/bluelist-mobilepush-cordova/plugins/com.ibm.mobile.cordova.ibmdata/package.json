@@ -1,0 +1,18 @@
+{
+    "version": "1.0.0-20140902-1945",
+    "name": "com.ibm.mobile.cordova.ibmdata",
+    "cordova_name": "IBMData Hybrid",
+    "description": "Cordova IBMData Plugin",
+    "license": "Apache 2.0",
+    "repo": "https://hub.jazz.net/git/bluemixmobilesdk/ibmdata-cordova",
+    "keywords": [
+        "cordova",
+        "IBMData",
+        "IBMQuery"
+    ],
+    "platforms": [
+        "android",
+        "ios"
+    ],
+    "engines": []
+}

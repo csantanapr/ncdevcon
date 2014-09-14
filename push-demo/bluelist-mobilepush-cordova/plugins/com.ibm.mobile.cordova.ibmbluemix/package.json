@@ -1,0 +1,17 @@
+{
+    "version": "1.0.0-20140902-1945",
+    "name": "com.ibm.mobile.cordova.ibmbluemix",
+    "cordova_name": "IBMBluemix Hybrid",
+    "description": "Cordova IBMBluemix Plugin",
+    "license": "Apache 2.0",
+    "repo": "https://hub.jazz.net/git/bluemixmobilesdk/ibmbluemix-cordova",
+    "keywords": [
+        "cordova",
+        "IBMBluemix"
+    ],
+    "platforms": [
+        "android",
+        "ios"
+    ],
+    "engines": []
+}

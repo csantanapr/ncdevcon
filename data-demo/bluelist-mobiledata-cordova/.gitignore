@@ -1,0 +1,9 @@
+# Specifies intentionally untracked files to ignore when using Git
+# http://git-scm.com/docs/gitignore
+
+node_modules/
+platforms/android/ant-build/
+platforms/android/CordovaLib/ant-build/
+platforms/android/ant-gen/
+platforms/ios/BlueList.xcodeproj/project.xcworkspace/xcuserdata/
+platforms/ios/BlueList.xcodeproj/project.xcworkspace/xcshareddata/
