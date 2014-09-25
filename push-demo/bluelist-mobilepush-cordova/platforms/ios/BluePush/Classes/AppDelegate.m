@@ -89,22 +89,34 @@
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     //register application for push notifications
-    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0) {
-        //For iOS 8 and above
-        UIUserNotificationSettings *settings =
-        [UIUserNotificationSettings settingsForTypes:
-         UIUserNotificationTypeAlert |
-         UIUserNotificationTypeBadge |
-         UIUserNotificationTypeSound categories:nil];
-        [application registerUserNotificationSettings:settings];
-        [application registerForRemoteNotifications];
-    } else {
-        // For iOS 7 and below
+#if __IPHONE_8_0
+        //Using Xcode6
+        if ([[UIApplication sharedApplication]respondsToSelector:@selector(registerUserNotificationSettings:)]) {
+            //For iOS 8 and above
+            UIUserNotificationSettings *settings =
+            [UIUserNotificationSettings settingsForTypes:
+             UIUserNotificationTypeAlert |
+             UIUserNotificationTypeBadge |
+             UIUserNotificationTypeSound categories:nil];
+            [application registerUserNotificationSettings:settings];
+            [application registerForRemoteNotifications];
+        } else {
+            // For iOS 7 and below
+            [application registerForRemoteNotificationTypes:
+             UIRemoteNotificationTypeBadge |
+             UIRemoteNotificationTypeAlert |
+             UIRemoteNotificationTypeSound];
+        }
+    
+    
+#else
+        // For Xcode5
         [application registerForRemoteNotificationTypes:
          UIRemoteNotificationTypeBadge |
          UIRemoteNotificationTypeAlert |
          UIRemoteNotificationTypeSound];
-    }
+#endif
+
 
     return YES;
 }
