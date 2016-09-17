@@ -1,9 +1,18 @@
-# Bluemix and Cordova Demos for NCDevcon 2014 (Sept 13-14)
+# Bluemix and Cordova Demos for NCDevcon 2016 (Sept 17-18)
 
-## Slides and Videos [bit.ly/bluemix-ncdevcon](http://bit.ly/bluemix-ncdevcon)
+## Slides [bit.ly/ionic-ncdevcon16](http://bit.ly/ionic-ncdevcon16)
 
-## How to do Mobile Data with Bluemix and Apache Cordova
-  [data-demo/README.md](data-demo/README.md)
+## Intro to Ionic 2 and Angular 2
 
-## How to do Mobile Push with Bluemix and Apache Cordova
-  [data-demo/README.md](data-demo/README.md)
+## Running demo
+
+### Install stuff
+```bash
+npm install -g ionic@beta cordova ios-deploy
+```
+
+### Run App in browser
+```bash
+ionic serve
+```
+
