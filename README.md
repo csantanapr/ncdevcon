@@ -14,3 +14,16 @@ npm install -g ionic@beta cordova ios-deploy
 ionic serve --lab
 ```
 
+### Run App in Android
+```bash
+ionic platform add android
+ionic run android
+```
+
+### Run App in iOS
+```bash
+ionic platform add android
+open platforms/ios/*.xcodeproj
+```
+Use Select Play button and select a Simulator or a Device attached via USB
+
