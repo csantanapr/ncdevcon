@@ -19,6 +19,5 @@ export class YoutubeService {
       .switchMap(url => this.http.get(url).map(res => res.json()) )
       .map(response => response['items'] );
   }
-
 }
 
