@@ -11,13 +11,6 @@ export class YoutubeService {
     const BASE_URL = 'https://www.googleapis.com/youtube/v3/search';
     const API_TOKEN = 'AIzaSyD-AqEfjuN-0jHjb795G1yPg-HR8H_Xi9g';
     const makeURL = (query) => `${BASE_URL}?q=${query}&part=snippet&maxResults=20&type=video&key=${API_TOKEN}`
-    /* fake data for testing 
-    const makeURL = (query) => {
-      let result = query === 'ionic' ? './data-ionic.json' : './data-angular.json';
-      return result + "?" + new Date().toISOString();  
-    };
-    */
-    
     
     return stream
       .map(inputText => makeURL(inputText) )

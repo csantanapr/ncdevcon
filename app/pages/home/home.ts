@@ -9,15 +9,7 @@ import { FORM_DIRECTIVES, FormControl } from '@angular/forms';
   providers: [YoutubeService],
   directives: [FORM_DIRECTIVES],
   templateUrl: 'build/pages/home/home.html'
-  /*
-  template: `
 
-    <input type="text" placeholder="search youtube..." [formControl]="searchInput">
-     <ul>
-       <li *ngFor=" let video of videos | async">{{video | json}}</li>
-     </ul>
-  `
-  */
 })
 export class HomePage {
   videos: Observable<any[]>;
