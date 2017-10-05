@@ -29,12 +29,14 @@ Every demo has a `deploy.sh`, `run.sh` and `clean.sh` scripts
 Simple Echo Action
 
 ### [Demo 2](./demo2)
-Hello Web Action
+Hello World Web Action with query parameter `name`
 
 ### [Demo 3](./demo3)
-Web Action `index` returns Web Page to Test APIs
-Web Action `text`  returns HTML Componen using Cache-Control
-Web Action `json`  returns JSON 
+- Shows how to include HTTP headers including `Content-Type` and `Cache-Control`
+- Shows how to repond with text or JSON
+- Web Action `index` returns Web Page to Test APIs
+- Web Action `text`  returns `text/html`
+- Web Action `json`  returns `application/json`
 
 # License
 [Apache 2.0](LICENSE.txt)
