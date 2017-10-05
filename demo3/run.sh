@@ -7,6 +7,6 @@ WSKURL=`bx wsk action get demo3/text --url | tail -n 1`
 echo ${WSKURL}
 curl -s ${WSKURL}
 
-WSKURL=`bx wsk action get demo3/items --url | tail -n 1`
+WSKURL=`bx wsk action get demo3/json --url | tail -n 1`
 echo ${WSKURL}
 curl -s ${WSKURL} | jq .
