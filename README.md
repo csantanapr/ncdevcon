@@ -53,7 +53,50 @@ Hello World Web Action with query parameter `name`
 - Web Action `dbInsert`  handles POST/PUT to insert item into DataBase
 - Web Action `dbGet`     handles GET to retrieve items from DataBase
 - Web Action `dbDelete`  handles DELETE to destroy item from DataBase
-- API `/db/friends` to handle POST, PUT, GET, DELETE
+- Single API endpoint `/db/friends` to handle POST, PUT, GET, DELETE
+
+### [Demo 6]
+Map custom domain name to your API using API Gateway
+
+This will allow you to expose your api like `https://api.csantanapr.com/db/friends`
+
+1. Generate a certificate and private key for your domain name:
+    - One of the easiest way is to use [LetsEncrypt](https://letsencrypt.org/)
+    - I used my Mac from home.
+    - Go to your DNS provider for your domain and create an A record to map your domain `api.csantanapr.com` to your public IP Address from your home router.
+    - Configure your router to forward port `443` to the your Mac.
+    - Turn off the firewall only while you are generating your certificate.
+    - Install [CertBot](https://certbot.eff.org/#osx-other) CLI
+    - Run the certbot, for example in stand-alone to run it's own web server
+      ```
+      sudo certbot certonly --standalone -d api.csantanapr.com
+      ```
+    - This will generate the certificate and private key
+       ```
+        Congratulations! Your certificate and chain have been saved at:
+        /etc/letsencrypt/live/api.csantanapr.com/fullchain.pem
+        Your key file has been saved at:
+        /etc/letsencrypt/live/api.csantanapr.com/privkey.pem
+       ```
+
+2. Upload your Certificate and Private Key
+    - Got to your Organization in Bluemix
+    Manage->Account->Organizations from the top right corner of the Console.
+    - Click `View Details` next to your organization
+    - Click `Edit Org` next to your organization
+    - Click `Domain` at the top bar
+    - Click `Add Domain` button
+    - Enter your domain in the first row `CUSTOM DOMAINS`
+    - Click `SAVE`
+    - Click the icon to Upload Certificate under the second row `SSL CERTIFICATES`
+
+3. Select the Domain with your API in the API Gateway UI
+    - Go to the APIs Console 
+    - Visit your API Definition
+    - Your new domain name will now show in the list of API Domain drop down.
+    - Select you new domain
+    - Scroll to the bottom and click `Save`
+    - It takes about 5 minutes to be active 
 
 # License
 [Apache 2.0](LICENSE.txt)
