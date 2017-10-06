@@ -91,10 +91,11 @@ This will allow you to expose your api like `https://api.csantanapr.com/db/frien
     - Click the icon to Upload Certificate under the second row `SSL CERTIFICATES`
 
 3. Select the Domain with your API in the API Gateway UI
-    - Go to the APIs Console 
-    - Visit your API Definition
-    - Your new domain name will now show in the list of API Domain drop down.
-    - Select you new domain
+    - Go to the [API Gateway Console](https://console.bluemix.net/openwhisk/apimanagement?env_id=ibm%3Ayp%3Aus-south)
+    - Select the API to configure 
+    - Select API Definition in the navigation column
+    - Your new domain name will now show in the list of API Domain
+    - Select you new domain from the drop down list
     - Scroll to the bottom and click `Save`
     - It takes about 5 minutes to be active 
 
