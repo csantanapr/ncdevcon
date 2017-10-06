@@ -55,7 +55,7 @@ Hello World Web Action with query parameter `name`
 - Web Action `dbDelete`  handles DELETE to destroy item from DataBase
 - Single API endpoint `/db/friends` to handle POST, PUT, GET, DELETE
 
-### [Demo 6]
+### Demo 6
 Map custom domain name to your API using API Gateway
 
 This will allow you to expose your api like `https://api.csantanapr.com/db/friends`
