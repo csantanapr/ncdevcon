@@ -38,5 +38,14 @@ Hello World Web Action with query parameter `name`
 - Web Action `text`  returns `text/html`
 - Web Action `json`  returns `application/json`
 
+### [Demo 4](./demo4)
+- Shows how to Promises
+- Shows how to read a local File
+- Shows how to include files in Zip Action
+- Shows how to include 2 actions in one Zip Action
+- Shows how to access HTTP request Verb/Method
+- Web Action `html`  returns a Web Form
+- Web Action `form`  handles POST for Web Form
+
 # License
 [Apache 2.0](LICENSE.txt)
