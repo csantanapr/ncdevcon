@@ -47,5 +47,12 @@ Hello World Web Action with query parameter `name`
 - Web Action `html`  returns a Web Form
 - Web Action `form`  handles POST for Web Form
 
+### [Demo 5](./demo5)
+- Shows how to Promises
+- Shows how to access CouchDB/Cloudant
+- Web Action `dbInsert`  handles POST to insert item into DataBase
+- Web Action `dbGet`  handles GET to retrieve items from DataBase
+
+
 # License
 [Apache 2.0](LICENSE.txt)

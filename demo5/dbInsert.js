@@ -1,7 +1,7 @@
 var nano = require('nano');
 var db;
-function main({ name='Carlos', handle='csantanapr-1', project='OpenWhisk', _credentials }) {
-  db = db ? db : nano(_credentials.write.url).use('friends');
+function main({ name='Carlos', handle='csantanapr-1', project='OpenWhisk', dbname, _credentials }) {
+  db = db ? db : nano(_credentials.write.url).use(dbname);
   return new Promise((resolve) => {
     let doc = {_id:handle, name,project}
     db.get(doc._id,(err, body)=>{
