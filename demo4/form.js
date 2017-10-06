@@ -1,4 +1,4 @@
-// shows how to handle a Web FORM only allows POST and uses Promises
+// shows how to handle a Web FORM only allows POST
 function main({ name = 'Carlos', handle = 'csantanapr', project = 'OpenWhisk', __ow_method: method }) {
   //Function have access to http request properties
   // __ow_method
@@ -10,34 +10,22 @@ function main({ name = 'Carlos', handle = 'csantanapr', project = 'OpenWhisk', _
     return { statusCode: 405, body:'Method Not allow, Only POST' };
   }
 
-  return new Promise((resolve) => {
-    var body;
-    body = {
-      name: name,
-      handle: handle,
-      project: project,
-      method: method
-    }
-    resolve(html(body));
-  })
-
-}
-function html({ name, handle, project }) {
-  let html = `
-  <html>
-  <body>
-  <p>Thank you for your input</p>
-  name: ${name}<br>
-  handle: ${handle}<br>
-  project: ${project}<br>
-  </body>
-  </html>
-  `;
   return {
+    statusCode: 200,
     headers: {
       'Content-Type': 'text/html'
     },
-    body: html
+    body: `
+    <html>
+    <body>
+      <p>Thank you for your input</p>
+      Name: ${name}<br>
+      Handle: ${handle}<br>
+      Project: ${project}<br>
+    </body>
+    </html>
+    `
   };
 }
+
 exports.main = main;
