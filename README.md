@@ -48,11 +48,12 @@ Hello World Web Action with query parameter `name`
 - Web Action `form`  handles POST for Web Form
 
 ### [Demo 5](./demo5)
-- Shows how to Promises
 - Shows how to access CouchDB/Cloudant
-- Web Action `dbInsert`  handles POST to insert item into DataBase
-- Web Action `dbGet`  handles GET to retrieve items from DataBase
-
+- Shows how to create API endpoints in APIGateway
+- Web Action `dbInsert`  handles POST/PUT to insert item into DataBase
+- Web Action `dbGet`     handles GET to retrieve items from DataBase
+- Web Action `dbDelete`  handles DELETE to destroy item from DataBase
+- API `/db/friends` to handle POST, PUT, GET, DELETE
 
 # License
 [Apache 2.0](LICENSE.txt)
