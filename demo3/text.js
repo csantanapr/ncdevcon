@@ -7,7 +7,7 @@ function main(args) {
   return {
     statusCode: 200,
     headers: {
-      'Content-Type': 'text/html',
+      'Content-Type': 'text/plain',
       'Cache-Control': 'max-age=60'
     },
     body: template

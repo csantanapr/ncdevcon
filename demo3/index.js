@@ -7,6 +7,8 @@ function main(args) {
     <div id='text'></div>
     <button onclick="loadJSON()">loadJSON</button>
     <div id='json'></div>
+
+    
     <script type='text/javascript'>
       function loadJSON() {
         var items = document.querySelector('#json');
