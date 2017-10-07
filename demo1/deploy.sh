@@ -1,2 +1,6 @@
 #!/bin/bash
-bx wsk action update demo1 function.js --kind nodejs:6
+WSKCLI=${WSKCLI:="bx wsk"}
+echo "Using CLI ${WSKCLI}"
+set -x
+
+${WSKCLI} action update demo1 function.js --kind nodejs:6
