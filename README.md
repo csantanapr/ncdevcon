@@ -9,7 +9,7 @@ Slides: [bit.ly/ncdevcon17](http://bit.ly/ncdevcon17)
 Even after 30 days and entering a credit card the free tier applies every month.
 
 ## Setup the IBM Functions CLI Plugin
-Setup the CLI following the instructions [here](https://console.bluemix.net/openwhisk/learn/cli)
+Setup the CLI following the instructions [on the CLI setup page](https://console.bluemix.net/openwhisk/learn/cli)
 
 Test IBM Functions CLI is working
 ```
