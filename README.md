@@ -48,6 +48,8 @@ Hello World Web Action with query parameter `name`
 - Web Action `form`  handles POST for Web Form
 
 ### [Demo 5](./demo5)
+- Setup couchdb/cloudant write credentials by renaming `.credentials.write.json.template` to `.credentials.write.json`
+- Setup couchdb/cloudant read credentials by renaming `.credentials.read.json.template` to `.credentials.read.json`
 - Shows how to access CouchDB/Cloudant
 - Shows how to create API endpoints in APIGateway
 - Web Action `dbInsert`  handles POST/PUT to insert item into DataBase
