@@ -1,4 +1,4 @@
-# OpenWhisk Web Actions demos for NCDevCon 2017 (Oct 7-8)
+# OpenWhisk Web Actions - [NCDevCon 2017](http://ncdevcon.com/) (Oct 7-8)
 
 Slides: [bit.ly/ncdevcon17](http://bit.ly/ncdevcon17)
 
