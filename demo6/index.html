@@ -1,0 +1,44 @@
+<html>
+
+<body>
+
+  <button onclick="loadJSON()" style="margin-bottom:10px">loadJSON</button>
+  <div id='json' ></div>
+  <script type='text/javascript'>
+    function loadJSON() {
+      var items = document.querySelector('#json');
+      fetch('https://api.csantanapr.com/db/friends').then(function (response) {
+        return response.json();
+      }).then(function (json) {
+        
+        var friends ="";
+        json.friends.forEach(function(f) {
+          friends += f.name + ",        "+ f._id + ",          " + f.project +'<br>'
+        });
+        items.innerHTML = friends;
+
+        //items.innerHTML = JSON.stringify(json);
+      });
+    }
+  </script>
+  
+  <form style="margin-top:40px" action="https://api.csantanapr.com/db/friends" method="post" target="_blank">
+    <label for="POST-name">Name:</label>
+    <br>
+    <input id="POST-name" type="text" name="name" >
+    <br>
+    <label for="POST-handle">Twitter Handle:</label>
+    <br>
+    <input id="POST-handle" type="text" name="handle" >
+    <br>
+    <label for="POST-project">Project:</label>
+    <br>
+    <input id="POST-project" type="text" name="project" >
+    <br>
+    <input type="submit">
+  </form>
+
+
+</body>
+
+</html>
