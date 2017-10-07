@@ -5,4 +5,4 @@ set -x
 
 WSKURL=`${WSKCLI} action get demo2 --url | tail -n 1`
 echo ${WSKURL}
-curl ${WSKURL}?name=NCDevCon17
+curl -k ${WSKURL}?name=NCDevCon17

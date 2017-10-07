@@ -5,12 +5,12 @@ set -x
 
 WSKURL=`${WSKCLI} action get demo3/index --url | tail -n 1`
 echo ${WSKURL}
-curl ${WSKURL}
+curl -k ${WSKURL}
 
 WSKURL=`${WSKCLI} action get demo3/text --url | tail -n 1`
 echo ${WSKURL}
-curl -s ${WSKURL}
+curl -k -s ${WSKURL}
 
 WSKURL=`${WSKCLI} action get demo3/json --url | tail -n 1`
 echo ${WSKURL}
-curl -s ${WSKURL} | jq .
+curl -k -s ${WSKURL} | jq .
