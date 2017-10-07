@@ -1,6 +1,6 @@
 # OpenWhisk Web Actions demos for NCDevCon 2017 (Oct 7-8)
 
-Slides: [TBD]()
+Slides: [bit.ly/ncdevcon17](http://bit.ly/ncdevcon17)
 
 # Setup and Install
 - Easiest way to run demos is using IBM Functions SaaS, it has large Free tier (400,000 GBs)
