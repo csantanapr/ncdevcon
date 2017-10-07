@@ -2,8 +2,9 @@
 
 <body>
 
-  <button onclick="loadJSON()" style="margin-bottom:10px">loadJSON</button>
-  <div id='json' ></div>
+  <button onclick="loadJSON()">loadJSON</button>
+  <h3>Friends</h3>
+  <ul id='json' ></ul>
   <script type='text/javascript'>
     function loadJSON() {
       var items = document.querySelector('#json');
@@ -13,7 +14,7 @@
         
         var friends ="";
         json.friends.forEach(function(f) {
-          friends += f.name + ",        "+ f._id + ",          " + f.project +'<br>'
+          friends += "<li>" + f.name + ",        "+ f._id + ",          " + f.project +'</li>'
         });
         items.innerHTML = friends;
 
@@ -22,7 +23,7 @@
     }
   </script>
   
-  <form style="margin-top:40px" action="https://api.csantanapr.com/db/friends" method="post" target="_blank">
+  <form style="margin-top:20px" action="https://api.csantanapr.com/db/friends" method="post" target="_blank">
     <label for="POST-name">Name:</label>
     <br>
     <input id="POST-name" type="text" name="name" >
