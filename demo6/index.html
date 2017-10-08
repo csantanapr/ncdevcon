@@ -8,7 +8,7 @@
   <script type='text/javascript'>
     function loadJSON() {
       var items = document.querySelector('#json');
-      fetch('https://api.csantanapr.com/db/friends').then(function (response) {
+      fetch('/db/friends').then(function (response) {
         return response.json();
       }).then(function (json) {
         
@@ -23,7 +23,7 @@
     }
   </script>
   
-  <form style="margin-top:20px" action="https://api.csantanapr.com/db/friends" method="post" target="_blank">
+  <form style="margin-top:20px" action="/db/friends" method="post" target="_blank">
     <label for="POST-name">Name:</label>
     <br>
     <input id="POST-name" type="text" name="name" >

@@ -58,6 +58,11 @@ Hello World Web Action with query parameter `name`
 - Single API endpoint `/db/friends` to handle POST, PUT, GET, DELETE
 
 ### Demo 6
+- Shows how to map domain name for example `https://api.csantanapr.com/db/friends` to your endpoints from demo 5
+- Web Action `index` returns Web Page that uses API `db/friends` API
+- Web Page is accesible from different endpoint `app/friends` https://api.csantanapr.com/app/friends
+
+### Map Domain name using Bluemix
 Map custom domain name to your API using API Gateway
 
 This will allow you to expose your api like `https://api.csantanapr.com/db/friends`
@@ -100,6 +105,8 @@ This will allow you to expose your api like `https://api.csantanapr.com/db/frien
     - Select you new domain from the drop down list
     - Scroll to the bottom and click `Save`
     - It takes about 5 minutes to be active 
+
+
 
 # License
 [Apache 2.0](LICENSE.txt)
