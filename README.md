@@ -96,6 +96,7 @@ This will allow you to expose your api like `https://api.csantanapr.com/db/frien
     - Enter your domain in the first row `CUSTOM DOMAINS`
     - Click `SAVE`
     - Click the icon to Upload Certificate under the second row `SSL CERTIFICATES`
+    - Upload the files from step 1, the certificate `fullchain.pem` and the private key `privkey.pem`
 
 3. Select the Domain with your API in the API Gateway UI
     - Go to the [API Gateway Console](https://console.bluemix.net/openwhisk/apimanagement?env_id=ibm%3Ayp%3Aus-south)
